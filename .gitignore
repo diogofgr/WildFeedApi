@@ -1,0 +1,8 @@
+.env
+node_modules
+
+# SSL certificate
+sslcert
+server.cert
+server.crt
+server.key

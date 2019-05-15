@@ -1,0 +1,58 @@
+* {
+  --header-height: 10vh;
+  --navbar-height: 10vh;
+  --content-page-height: 77vh;
+}
+
+html, body {
+  margin: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #111111;
+}
+
+.page-content {
+  background-color: #fff;
+  padding: 10px;
+  height: var(--content-page-height);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.header {
+  width: 100%;
+  height: var(--header-height);
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.header div, a{
+  height: 100%;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar {
+  width: 100%;
+  height: var(--navbar-height);
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  display: flex;
+  
+}
+.navbar div, a{
+  height: 100%;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-around;
+  align-items: center;
+}

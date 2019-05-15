@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    ul.user-search-list
+        each user in users
+            li.user-search-result
+                img(src=user.avatar)
+                div.user-search-details
+                    strong= user.username
+                    div= user.displayName
+
