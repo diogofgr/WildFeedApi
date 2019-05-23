@@ -8,20 +8,5 @@ html
     link(rel='stylesheet', href='/stylesheets/new-post.css')
     link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous")
   body
-    div.header
-      a(href='/posts/new')
-        i(class="fas fa-plus")
-    .page-content
+    div.container
       block content
-    
-    div.navbar
-      //- navbar
-      div
-        a(href='/posts')
-          i(class="fas fa-images")
-      div
-        a(href='/users')
-          i(class="fas fa-users")
-      div
-        a(href='/')
-          i(class="fas fa-home")

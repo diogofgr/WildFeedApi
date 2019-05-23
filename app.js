@@ -41,6 +41,7 @@ app.use(passport.initialize());
 // app.use(passport.session());
 
 // API routes;
+app.use('/', indexRouter);
 app.use('/api/posts', apiRouter.posts);
 app.use('/api/auth', apiRouter.auth);
 

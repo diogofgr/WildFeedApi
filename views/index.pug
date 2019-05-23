@@ -1,9 +1,70 @@
 extends layout
 
 block content
-  if user
-    p
-      a(href='/auth/logout') Logout
-  else 
-    p
-      a(href='/auth/facebook/') Login with FB
+    h1 Notes App
+    p.
+        This API allows a user create/read/update/delete notes.
+        It was created just for testing purposes.
+        It requires no authentication and the database is reset regularly.
+    div
+        span Built with 
+            a(target="_blank" href='https://nodejs.org/en/about/') Node
+        span ,
+            a(target="_blank" href='https://expressjs.com/') Express 
+        span and 
+            a(target="_blank" href='https://github.com/pugjs/pug') Pug
+
+    h3 API Documentation
+
+    h4 get your user token
+    p https://developers.facebook.com/tools/explorer/357231431592244
+
+    h4 GET all notes   
+    p.code-snippet 
+        code /notes
+    p response:
+    .code-snippet
+        pre
+            code.
+                [
+                    {
+                        title: "Some title",
+                        content: "This note is very relevant",
+                        _id: "567hg4jh123"
+                    },
+                    {...},
+                    {...},
+                    {...}
+                ]
+    
+    h4 POST a note
+    p.code-snippet
+        code /notes
+    p request body (all fields are required):
+    .code-snippet
+        pre
+            code.
+                {
+                    title: "The Title Here",
+                    content: "Content for the note here"
+                }
+
+    h4 DELETE a note by id
+    p.code-snippet
+        code /notes/:id
+
+    h4 GET a note by id
+    p.code-snippet
+        code /notes/567hg4jh123
+    p response:
+    .code-snippet
+        pre
+            code.
+                {
+                    title: "Some title",
+                    content: "This note is very relevant",
+                    _id: "567hg4jh123"
+                },
+
+    h6 Made by 
+        a(target="_blank" href='https://github.com/diogofgr') Diogo
