@@ -42,7 +42,8 @@ passport.deserializeUser(function(id, done) {
 passport.use(new FacebookTokenStrategy({
     clientID: process.env.FACEBOOK_APP_ID,
     clientSecret: process.env.FACEBOOK_APP_SECRET,
-    fbGraphVersion: 'v3.0'
+    fbGraphVersion: 'v3.0',
+    profileFields: ['id', 'displayName', 'photos']
   }, function(accessToken, refreshToken, profile, done) {
     findOrCreateUser(accessToken, refreshToken, profile, done);
   }

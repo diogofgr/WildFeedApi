@@ -5,7 +5,8 @@
   "scripts": {
     "start": "MODE=production node ./bin/www",
     "dev": "nodemon ./bin/www",
-    "db:reset": "node db/seed.js"
+    "db:reset": "node db/seed.js",
+    "db:drop": "node db/drop.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
